@@ -1,4 +1,4 @@
-# NoNonSec — No-nonsense Security
+# NoNonSec - No-nonsense Security
 
 ## Overview
 
