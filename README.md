@@ -1,67 +1,71 @@
-# NOPSEC — No One Prioritizes SECurity
+# NoNonSec — No-nonsense Security
 
 ## Overview
 
-**NOPSEC** states the hard truth:  
-**No One Prioritizes SECurity**—until it’s too late.
+**NoNonSec** delivers the hard truth:  
+**No-nonsense Security** — no shortcuts, no excuses, no endless discussions.
 
-Only run software if one fully trust it.
+Only run software you can fully trust.  
+Trust is earned; it must never be assumed.
 
-Trust is earned, never assumed.
+No endless debates about vague reasons like “it only runs internally” or
+“other excuses.” Security applies everywhere, no exceptions.
 
-## Shift-Left Security is Essential
+## Shift-Left Security Is Essential
 
-NOPSEC pushes for **shift-left security**, embedding checks early in
-development. This means:
+NoNonSec champions **shift-left security**, integrating checks early in the
+development lifecycle:
 
-- Know exactly what is inside every package before running it.
-- Demand transparency and verification before deployment.
-- Catch security issues early, when cheaper and easier to fix.
+- Understand every component in your dependencies before you execute them.
+- Require full transparency and verification prior to deployment.
+- Identify and resolve security issues when they’re cheapest and easiest to fix.
 
-Shift-left reduces risk and improves security posture.
+Shifting left reduces risk and strengthens your security posture.
 
-## How to Establish Trust?
+## Earning Trust
 
-Trust can only be earned through:
+Trust comes only through rigorous verification:
 
-- **Software Bill of Materials (SBOM):**  
-  A detailed list of all components and versions in the package.
+- **Software Bill of Materials (SBOM)**  
+  A comprehensive inventory of every component and version in the package.
 
-- **Security Scanning:**  
-  Automated or manual scans to find known security flaws.
+- **Security Scanning**  
+  Automated or manual vulnerability assessments to uncover known flaws.
 
-No SBOM or scan means no trust.
+No SBOM or scan? No trust. No trust? No run.
 
-## The Core Rule: No SBOM + No Scan = No Run
+## Core Principle: No SBOM + No Scan = No Run
 
-Without SBOM and vulnerability scan, **do not run the software.**
+If a package lacks both an SBOM and a vulnerability scan, **do not run it**.  
+Executing unverified software is an unacceptable security risk.
 
-Running unverified software is a serious security risk.
+## Shift-Right Security Complements Shift-Left
 
-Only run what is transparent and verified.
+Shift-left is vital — but it’s only half the battle. Shift-right ensures
+ongoing protection:
 
-## Shift-Right Security Still Matters
+- Continuous monitoring of live systems.
+- Rapid incident detection and response.
+- Regular patching and mitigation workflows.
 
-Shift-left is critical but not enough.
+Security never stops — it’s a continuous, full-lifecycle commitment.
 
-Shift-right is also needed for:
+## Usage
 
-- Monitoring live systems.
-- Incident detection and response.
-- Timely patching and mitigation.
-
-Security is a continuous process.
+For detailed instructions on applying NoNonSec principles, see the
+[Usage Guide](docs/usage.md).
 
 ## Summary
 
-NOPSEC’s message is clear:
+NoNonSec’s mandate is straightforward:
 
-- No One Prioritizes SECurity until a breach happens.
-- Trust before running software — never assume.
-- Require SBOM and vulnerability scans upfront.
-- Shift-left helps, but shift-right remains vital.
-- Protect environments with transparency and checks.
+1. No-nonsense security from day one — don’t wait for breaches.
+2. Require SBOMs and vulnerability scans before running any software.
+3. Embed shift-left practices early; maintain shift-right vigilance later.
+4. Protect your environments with transparency, verification, and continuous
+   checks.
+5. No excuses, no vague reasons — security applies everywhere.
 
 ---
 
-**NOPSEC — Because No One Prioritizes SECurity until it’s too late.**
+**NoNonSec — Because security is not optional and endless excuses will not keep one safe.**

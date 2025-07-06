@@ -1,0 +1,63 @@
+# yamllint disable rule:line-length
+---
+version: "2"
+linters:
+  default: all
+  disable:
+    # err113 is disabled as it does not make any sense to use wrapped static
+    # errors as it contains superfluous escaped double quotes.
+    - err113
+    # exhaustruct is disabled as there are scenarios in this code base where a
+    # some keys of a struct should be empty while testing.
+    - exhaustruct
+    # gochecknoglobals is disabled as there are global errors and component
+    # test variables.
+    - gochecknoglobals
+    # testpackage is disabled as it is a bad practice to make methods public to
+    # be able to test them.
+    - testpackage
+  settings:
+    depguard:
+      rules:
+        main:
+          files:
+            - "!**/*_a _file.go"
+          allow:
+            - $gostd
+            - github.com/sirupsen/logrus
+          deny:
+            - pkg: log
+              desc: Use 'log "github.com/sirupsen/logrus"' instead
+            - pkg: github.com/pkg/errors
+              desc: Should be replaced by standard lib errors package
+            - pkg: github.com/anchore/go-homedir
+              desc: Must be replaced by 'github.com/mitchellh/go-homedir'
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - internal/app/mcvs-scanner-cli/application/swagger
+      - third_party$
+      - builtin$
+      - examples$
+    rules:
+      - linters:
+          - funlen
+        path: _test\.go
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - gofumpt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - internal/app/mcvs-scanner-cli/application/swagger
+      - third_party$
+      - builtin$
+      - examples$
