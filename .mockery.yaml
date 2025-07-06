@@ -1,0 +1,10 @@
+---
+dir: "{{.InterfaceDir}}/mocks"
+filename: "{{.InterfaceName | snakecase}}.go"
+structname: "{{.InterfaceName}}"
+pkgname: mocks
+template: testify
+# packages:
+#   github.com/schubergphilis/mcvs-scanner/internal/pkg/container/image/downloader/application:
+#     interfaces:
+#       Executor: {}
